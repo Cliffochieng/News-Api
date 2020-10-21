@@ -80,3 +80,28 @@ def cnn():
     mylist = zip(news, desc, url, img)
 
     return render_template('cnn.html', context=mylist)
+
+
+@app.route('/business')
+def business():
+    newsapi = NewsApiClient(api_key="d40c178ee0c6474f963ed683b651a3ab")
+    topheadlines = newsapi.get_top_headlines(sources="business-insider")
+
+    articles = topheadlines['articles']
+
+    desc = []
+    news = []
+    url = []
+    img = []
+
+    for i in range(len(articles)):
+        myarticles = articles[i]
+
+        news.append(myarticles['title'])
+        desc.append(myarticles['description'])
+        url.append(myarticles['url'])
+        img.append(myarticles['urlToImage'])
+
+    mylist = zip(news, desc, url, img)
+
+    return render_template('business.html', context=mylist)
