@@ -105,3 +105,8 @@ def business():
     mylist = zip(news, desc, url, img)
 
     return render_template('business.html', context=mylist)
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+    app.run
