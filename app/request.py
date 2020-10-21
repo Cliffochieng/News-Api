@@ -27,3 +27,17 @@ def get_news(source):
 
     return news_results
 
+def process_results(news_results_list):
+    news_results = []
+    for news_item in news_results_list:
+        name = news_item.get('title')
+        description = news_item.get('description')
+        url = news_item.get('url')
+        category = news_item.get('urlToImage')
+
+        if name:
+            news_obj = News(title, description, url, urlToImage)
+            news_results.append(news_obj)
+
+    return news_results
+
