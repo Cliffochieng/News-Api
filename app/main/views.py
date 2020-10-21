@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    newsapi = NewsApiClient(api_key="d40c178ee0c6474f963ed683b651a3ab")
+    newsapi = NewsApiClient(api_key="06105b614bb0a963eadab755cea33148")
     topheadlines = newsapi.get_top_headlines(sources="abc-news")
 
     articles = topheadlines['articles']
@@ -33,7 +33,7 @@ def index():
 
 @app.route('/bbc')
 def bbc():
-    newsapi = NewsApiClient(api_key="d40c178ee0c6474f963ed683b651a3ab")
+    newsapi = NewsApiClient(api_key="06105b614bb0a963eadab755cea33148")
     topheadlines = newsapi.get_top_headlines(sources="bbc-news")
 
     articles = topheadlines['articles']
@@ -58,7 +58,7 @@ def bbc():
 
     @app.route('/cnn')
 def cnn():
-    newsapi = NewsApiClient(api_key="d40c178ee0c6474f963ed683b651a3ab")
+    newsapi = NewsApiClient(api_key="06105b614bb0a963eadab755cea33148")
     topheadlines = newsapi.get_top_headlines(sources="cnn")
 
     articles = topheadlines['articles']
@@ -84,7 +84,7 @@ def cnn():
 
 @app.route('/business')
 def business():
-    newsapi = NewsApiClient(api_key="d40c178ee0c6474f963ed683b651a3ab")
+    newsapi = NewsApiClient(api_key="06105b614bb0a963eadab755cea33148")
     topheadlines = newsapi.get_top_headlines(sources="business-insider")
 
     articles = topheadlines['articles']
