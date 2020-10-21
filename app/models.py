@@ -8,4 +8,3 @@ class News:
         self.description = description
         self.url = url
         self.urlToImage = urlToImage
-       
