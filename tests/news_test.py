@@ -35,5 +35,3 @@ class NewsTest(unittest.TestCase):
         self.assertEquals(self.new_news.title,'title')
         self.assertEquals(self.new_news.description,'description')
         self.assertEquals(self.new_news.url,"url")
-        self.assertEquals(self.new_news.urlToImage,'urlToImage')
-       
